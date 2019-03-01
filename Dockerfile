@@ -29,7 +29,7 @@ RUN conda install -c conda-forge --quiet --yes \
     # clone templates into template directory
     git clone https://github.com/tacos-de-datos/planillas_jupyter.git /home/$NB_USER/.jupyter/planillas && \
     # add directory path to notebook config file
-    echo "c.JupyterLabTemplates.template_dirs = ['/home/$NB_USER/.jupyter/planillas/planillas']" >> /home/$NB_USER/.jupyter/jupyter_notebook_config.py \
+    echo "c.JupyterLabTemplates.template_dirs = ['/home/$NB_USER/.jupyter/planillas/planillas']" >> /home/$NB_USER/.jupyter/jupyter_notebook_config.py && \
     npm cache clean --force && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/$NB_USER/.cache/yarn && \
