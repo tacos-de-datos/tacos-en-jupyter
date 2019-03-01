@@ -6,8 +6,9 @@ LABEL maintainer="chekos <sergio@cimarron.io>"
 USER $NB_UID
 
 # Install other packages
-RUN conda install --quiet --yes \
+RUN conda install -c conda-forge --quiet --yes \
     'altair' \ 
+    'jupytext' \
     'vega' \
     'vega_datasets' \
     'jupyterlab=0.35.*' && \
