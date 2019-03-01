@@ -9,6 +9,7 @@ USER $NB_UID
 RUN conda install -c conda-forge --quiet --yes \
     'altair' \ 
     'jupytext' \
+    'geopandas==0.4.0' \
     'vega' \
     'vega_datasets' \
     'jupyterlab=0.35.*' && \
