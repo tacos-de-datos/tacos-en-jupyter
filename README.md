@@ -1,5 +1,8 @@
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/cimarron-io/cimarron-notebook/master)
-# cimarron-notebook
-python notebook for jupyterhub
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/tacos-de-datos/tacos-en-jupyter/master)
+# Tacos en Jupyter
+Una imagen `Docker` para crear un `JupyterHub` bien equipado.
 
-This image builds on jupyter/scipy-notebook and adds `jupyterlab_templates` and `altair`
+Esta imagen extiende la imagen `Docker` [jupyter/datascience-notebook](https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook) y le agrega:
+* `jupyterlab_templates`
+* `altair` (con `vega` y `vega_datasets`)
+* `jupytext`
