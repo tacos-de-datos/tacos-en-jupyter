@@ -44,7 +44,7 @@ RUN conda install -yq -c conda-forge nbrsessionproxy && \
     conda clean -tipsy
 # instala rstudio-server
 USER root
-RUN yum -y install wget
+RUN apt install wget
 RUN apt-get update && \
     curl --silent -L --fail https://download2.rstudio.org/rstudio-server-1.1.419-amd64.deb > /tmp/rstudio.deb && \
     echo '24cd11f0405d8372b4168fc9956e0386 /tmp/rstudio.deb' | md5sum -c - && \
