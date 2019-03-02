@@ -6,6 +6,7 @@ LABEL maintainer="chekos <sergio@cimarron.io>"
 USER $NB_UID
 
 # Install python packages
+RUN conda install -yq -c conda-forge nbrsessionproxy 
 RUN conda install -c conda-forge --quiet --yes 'osmnx' 'gdal' 'poppler' 'numpy' 'scipy' 'fiona'
 RUN conda install -c conda-forge --quiet --yes \
     'jupyterlab=0.35.*' \
@@ -46,8 +47,7 @@ RUN conda install -c conda-forge --quiet --yes \
 
 # Agrega esto de https://github.com/jupyterhub/zero-to-jupyterhub-k8s/issues/990
 # instala nbrsessionproxy extension
-RUN conda install -yq -c conda-forge nbrsessionproxy && \
-    conda clean -tipsy
+
 # instala rstudio-server
 USER root
 RUN apt install wget
