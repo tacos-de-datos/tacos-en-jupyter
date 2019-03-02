@@ -7,3 +7,4 @@ Esta imagen extiende la imagen `Docker` [jupyter/datascience-notebook](https://g
 * `jupyterlab_templates`
 * `altair` (con `vega` y `vega_datasets`)
 * `jupytext`
+* 'GeoPandas' y `OSMNx`
