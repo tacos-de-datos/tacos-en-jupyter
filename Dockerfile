@@ -7,13 +7,13 @@ USER $NB_UID
 
 # Install python packages
 RUN conda install -c conda-forge --quiet --yes \
+    'jupyterlab=0.35.*' \
     'altair' \ 
     'jupytext' \
-    'osmnx' \
     'geopandas==0.4.0' \
     'vega' \
     'vega_datasets' \
-    'jupyterlab=0.35.*' && \
+    'osmnx' && \
     conda remove --quiet --yes --force qt pyqt && \
     conda clean -typsy && \
     pip install jupyterlab_templates && \
