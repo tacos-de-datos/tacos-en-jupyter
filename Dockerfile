@@ -6,7 +6,7 @@ LABEL maintainer="chekos <sergio@cimarron.io>"
 USER $NB_UID
 
 # Install python packages
-RUN conda install -c conda-forge --quiet --yes 'osmnx'
+RUN conda install -c conda-forge --quiet --yes 'osmnx' 'gdal' 'poppler' 'numpy' 'scipy' 'fiona'
 
 RUN conda install -c conda-forge --quiet --yes \
     'jupyterlab=0.35.*' \
@@ -32,6 +32,7 @@ RUN conda install -c conda-forge --quiet --yes \
     git clone https://github.com/tacos-de-datos/planillas_jupyter.git /home/$NB_USER/.jupyter/planillas && \
     # add directory path to notebook config file
     echo "c.JupyterLabTemplates.template_dirs = ['/home/$NB_USER/.jupyter/planillas/planillas']" >> /home/$NB_USER/.jupyter/jupyter_notebook_config.py && \
+    echo "c.JupyterLabTemplates.include_default = True" >> /home/$NB_USER/.jupyter/jupyter_notebook_config.py && \
     npm cache clean --force && \
     rm -rf $CONDA_DIR/share/jupyter/lab/staging && \
     rm -rf /home/$NB_USER/.cache/yarn && \
