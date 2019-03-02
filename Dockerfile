@@ -7,7 +7,7 @@ USER $NB_UID
 
 # Install python packages
 RUN conda install -c conda-forge --quiet --yes 'osmnx' 'gdal' 'poppler' 'numpy' 'scipy' 'fiona'
-
+RUN conda config --set channel_priority false
 RUN conda install -c conda-forge --quiet --yes \
     'jupyterlab=0.35.*' \
     'altair' \ 
