@@ -14,6 +14,8 @@ RUN conda install -c conda-forge --quiet --yes \
     'geopandas==0.4.0' \
     'gdal' \
     'fiona' \
+    'h5py' \
+    'psycopg2' \
     'vega' \
     'vega_datasets' && \
     conda remove --quiet --yes --force qt pyqt && \
